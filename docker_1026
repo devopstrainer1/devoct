@@ -1,0 +1,200 @@
+dnf update -y
+    5  dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+    6  dnf install -y docker-ce docker-ce-cli containerd.io
+    7  systemctl start docker
+    8  systemctl enable docker
+    9  docker --version
+   10  history
+   11  clear
+   12  docker images
+   13  docker ps -a
+   14  docker run nginx
+   15  docker images
+   16  docker ps -a
+   17  docker run nginx
+   18  docker ps -a
+   19  docker images
+   20  cd /var/lib/docker
+   21  ls
+   22  cd images
+   23  cd image
+   24  ls
+   25  cd overlay2/
+   26  ls
+   27  cd imagedb/
+   28  ls
+   29  cd content/
+   30  ls
+   31  cd sha256/
+   32  ls
+   33  ls -lrt
+   34  clear
+   35  docker run -itd --name amit nginx
+   36  docker images
+   37  docker ps -a
+   38  docker run -itd --name amit nginx
+   39  docker rename 3a96f1adac0e edureka
+   40  docker ps -a
+   41  cat /etc/os-release 
+   42  clear
+   43  docker run -it --name arun ubuntu
+   44  docker ps -a
+   45  git
+   46  docker run -it --name arun1 ubuntu
+   47  docker ps -a
+   48  clear
+   49  docker ps
+   50  docker ps -a
+   51  docker inspect b06e6feed257
+   52  hostname -i
+   53  clear
+   54  docker ps
+   55  docker exec -it b06e6feed257 /bin/bash
+   56  docker ps
+   57  docker ps -a
+   58  docker start a8139bcf21d0
+   59  docker ps -a
+   60  docker ps -a
+   61  docker ps -a
+   62  docker start 3a96f1adac0e
+   63  docker ps -a
+   64  docker ps -a
+   65  docker ps -a
+   66  docker ps -a
+   67  docker exec -it 3a96f1adac0e /bin/bash
+   68  docker ps -a
+   69  docker start 5e2bcc880e99
+   70  docker ps -a
+   71  docker rm arun
+   72  docker rm arun --force
+   73  docker ps -a
+   74  docker stop amit
+   75  docker rm amit
+   76  docker ps -a
+   77  docker images
+   78  docker rmi nginx
+   79  docker ps -a
+   80  docer ps -a -q
+   81  docker ps -a -q
+   82  docker stop $(ps -a -q)
+   83  $(docker stop ps -a -q)
+   84  docker stop $(docker ps -a -q)
+   85  docker ps -a
+   86  docker rm $(docker ps -a -q)
+   87  docker ps -a
+   88  docker images
+   89  docker rmi nginx
+   90  docker images
+   91  docker run -itd nginx
+   92  docker ps -a
+   93  docker logs d37a0090eb03
+   94  docker port d37a0090eb03
+   95  docker inspect d37a0090eb03
+   96  curl ifconfig.co
+   97  docker ps -a
+   98  docker run -itd -P nginx
+   99  docker ps -a
+  100  docker run -itd -p 80:81 nginx
+  101  docker ps -a
+  102  docker run -itd -p 81:80 nginx
+  103  docker ps -a
+  104  docker run -itd -p 80:80 nginx
+  105  docker ps -a
+  106  netstat -an | grep 80
+  107  docker rm 8ed3a9022ddb --force
+  108  docker run -itd -p 80:80 nginx
+  109  docker ps -a
+  110  curl ifconfig.co
+  111  docker port 03e66ef69769
+  112  clear
+  113  docker run -itd --name demo ubuntu
+  114  docker ps -a
+  115  docker exec -it 092b4cde66e9 /bin/bash
+  116  docker ps -a
+  117  docker commit demo narendra
+  118  docker images
+  119  docker run -it narendra
+  120  clear
+  121  docker images
+  122  cd /tmp
+  123  vi Dockerfile
+  124  docker build -t amit1 .
+  125  docker images
+  126  cat Dockerfile 
+  127  docker inspect image amit1
+  128  clear
+  129  docker images
+  130  docker ps -a
+  131  docker run -itd -p 80:100 amit1
+  132  docker run -itd -p 100:80 amit1
+  133  docker ps -a
+  134  curl ifconfig.co
+  135  clear
+  136  docker images
+  137  vi amit
+  138  vi index.html
+  139  vi amit
+  140  docker build -t modified -f amit .
+  141  vi amit
+  142  docker build -t modified -f amit .
+  143  docker images
+  144  doker run -itd -p 101:80 modified
+  145  docker run -itd -p 101:80 modified
+  146  docker ps -a
+  147  curl ifcofig.co
+  148  curl ifconfig.co
+  149  docker ps -a
+  150  docker exec -it 736f9ded7c02 /bin/bash
+  151  curl ifconfig.co
+  152  docker run -itd -p 99:80 modified
+  153  docker run -itd -p 102:80 modified
+  154  docker run -itd -p 211:80 modified
+  155  docker run -itd -p 110:80 modified
+  156  clear
+  157  docker images
+  158  docker tag modified devopstrainer1/1026:modified
+  159  docker images
+  160  docker push devopstrainer1/1026:modified
+  161  docker login
+  162  docker push devopstrainer1/1026:modified
+  163  docker images
+  164  docker rmi devopstrainer1/1026:modified
+  165  docker images
+  166  docker pull devopstrainer1/1026:modified
+  167  docker images
+  168  cd /etc/systemmd
+  169  cd /var/lib/docker
+  170  ls
+  171  cd ~/.docker
+  172  pwd
+  173  l
+  174  ls
+  175  vi config.json 
+  176  docker syste df
+  177  docker system df
+  178  docker image prune
+  179  docker image prune -a
+  180  docker images
+  181  docker history modified
+  182  clear
+  183  docker images
+  184  cd /tmp
+  185  docker save modified -o amit.tar
+  186  ls -lrt
+  187  docker rmi modified --force
+  188  docker images
+  189  docker ps -a
+  190  docker stop $(docker ps -a -q)
+  191  docker rm $(docker ps -a -q)
+  192  docker images
+  193  docker rmi 19ab296f3fe0
+  194  docker images
+  195  ls -lrt
+  196  docker load < amit.tar 
+  197  docker images
+  198  docker stats
+  199  docker run -itd nginx
+  200  docker run -itd ubuntu
+  201  docker stats
+  202  docker ps -a
+  203  docker top 83aefe627bfa
